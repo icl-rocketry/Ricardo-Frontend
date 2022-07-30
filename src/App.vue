@@ -1,15 +1,28 @@
 <template>
   <ICLRHeader/>
   <div class="container">
-    <div class="fixed"></div>
-    <div class="Group">
-      <APIButton name="Button 1" command="Command 1"/>
-      <APIButton name="Button 2" command="Command 2"/>
-      <APIButton name="Button 3" command="Command 3"/>
-      <br>
-      <APIButton name="Button 4" command="Command 4"/>
-      <APIButton name="Button 5" command="Command 5"/>
-      <APIButton name="Button 6" command="Command 6"/>
+    <div class="fixed">
+      <ConnectionStatistics/>
+    </div>
+    <div class="Buttons">
+      <p class="Group">
+        <APIButton name="Button 1" command="Command 1"/>
+        <APIButton name="Button 2" command="Command 2"/>
+        <APIButton name="Button 3" command="Command 3"/>
+        <br>
+        <APIButton name="Button 4" command="Command 4"/>
+        <APIButton name="Button 5" command="Command 5"/>
+        <APIButton name="Button 6" command="Command 6"/>
+      </p>
+      <p class="Group">
+        <APIButton name="Button 7" command="Command 7"/>
+        <APIButton name="Button 8" command="Command 8"/>
+        <APIButton name="Button 9" command="Command 9"/>
+        <br>
+        <APIButton name="Button 10" command="Command 10"/>
+        <APIButton name="Button 11" command="Command 11"/>
+        <APIButton name="Button 12" command="Command 12"/>
+      </p>
     </div>
     <div class="flex-item" style="border:solid">
       <APIConsole/>
@@ -23,6 +36,7 @@ import ICLRHeader from "@/components/ICLRHeader";
 import APIButton from "@/components/APIButton";
 import APIConsole from "@/components/APIConsole";
 import APITextBox from "@/components/APITextBox";
+import ConnectionStatistics from "@/components/ConnectionStatistics";
 
 import {store} from '@/store'
 
@@ -33,6 +47,7 @@ export default {
     APIButton,
     APIConsole,
     APITextBox,
+    ConnectionStatistics,
   },
   data() {
     return {
@@ -51,7 +66,20 @@ export default {
   color: #2c3e50;
 }
 
-.Group {
+.container {
+  display: flex;
+}
+
+.fixed {
+  width: 15%;
+  text-align: left;
+}
+
+.flex-item {
+  flex-grow: 1;
+}
+
+.Buttons {
   flex-grow: 1;
   text-align: center;
   padding: 5px;
@@ -60,15 +88,7 @@ export default {
   border-color: #FFFFFF;
 }
 
-.container {
-  display: flex;
-}
-
-.fixed {
-  width: 10%;
-}
-
-.flex-item {
-  flex-grow: 1;
+.Group {
+  padding-bottom: 2cm;
 }
 </style>

@@ -27,12 +27,8 @@ export default {
 
 <style scoped>
 .InputForm {
-  /*width: 500px;*/
-  /*overflow: hidden;*/
   padding: 2px;
-  /*flex-grow: 1;*/
   display: flex;
-  /*text-align: left;*/
 }
 .InputTextBox {
   flex-grow: 1;
